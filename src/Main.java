@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -11,10 +12,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         while(play){
             System.out.println("Type 'x' om te stoppen \nType 'v' om te vertalen");
-            String input = scanner.nextLine();
+            String input = scanner.nextLine().toLowerCase();
             if(input.equals("x")){
                 play = false;
-            } else if (input.equals("v")) {
+            } else if (input.equalsIgnoreCase("v")) {
                 System.out.println("Type een cijfer in van 0 t/m 9");
                 int number = scanner.nextInt();
                 scanner.nextLine();
@@ -23,13 +24,15 @@ public class Main {
                     String result = translator.translate(number);
                     System.out.println("De vertaling van " + number + " is " + result);
                 } else {
-                    System.out.println("ongeldig");
+                    System.out.println(ongeldig);
                 }
             } else {
-                System.out.println("ongeldig");
+                System.out.println(ongeldig);
             }
         }
 
-        System.out.println("programma afgeslotenx");
+        System.out.println("programma afgesloten");
     }
 }
+
+// Huiswerk om na te kijken
