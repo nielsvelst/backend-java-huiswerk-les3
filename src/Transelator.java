@@ -12,5 +12,5 @@ public class Transelator {
     public String translate(Integer number){
         return numericAlpha.get(number);
     }
-// waarom heeft deze methode geen static?
+
 }

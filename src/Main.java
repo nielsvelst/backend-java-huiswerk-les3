@@ -19,7 +19,7 @@ public class Main {
                 System.out.println("Type een cijfer in van 0 t/m 9");
                 int number = scanner.nextInt();
                 scanner.nextLine();
-                // waarom moet dit worden toegevoegd?
+
                 if(number < 10){
                     String result = translator.translate(number);
                     System.out.println("De vertaling van " + number + " is " + result);
